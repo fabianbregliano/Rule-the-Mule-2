@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: inline-block;
+  height: 100vh;
+  width: 100vw;
+}
+
+div.tele-contorno {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  padding: 4px;
+}
+
+div.tele-color {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #663333;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  padding: 40px;
+  column-gap: 30px;
+}
+
+div.pantalla-contorno {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  padding: 3vh;
+  border-radius: 40px;
+}
+
+p {
+  font-size: 3rem;
+  text-align:right;
+  font-style:normal;
+  font-family: fantasy;
+}
+
+a {
+  color: black;
+}
+
+div.pantalla-contorno2 {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 1vh;
+  border-radius: 20px;
+}
+
+img#Logo {
+  display: inline-block;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+img {
+  display: inline-block;
+  border-radius: 20px;
+  width: 65%;
+  height: 65%;
+  padding: 0;
+}
+
+aside {
+  height: 90vh;
+  width: 15vw;
+  background-color: #8f7e7e;
+  display: grid;
+  grid-template-rows: 5fr 0.5fr;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+nav {
+  border-radius: 20px;
+  background-color: white;
+  animation-duration: 4s;
+  animation-name: cambiarColorNav;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cambiarColorNav {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: chartreuse;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+footer {
+  justify-items: center;
+  background-color: #8f7e7e;
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+h3 {
+  justify-items: center;
+  align-items: flex-end;
+  color: chartreuse;
+  display: grid;
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.nombre {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 115, 0);
+  padding: 20px;
+  grid-area: 6 / 1 / span 10 / span 2;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  animation-name: nombre;
+  animation-duration: 1300ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+
+@keyframes nombre {
+  0% {
+    height: 0;
+  }
+  70% {
+    height: 100%;
+  }
+  85% {
+    height: 85%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  div.pantalla-contorno {
+    padding: 0;
+  }
+  div.pantalla-contorno2 {
+    padding: 1vh;
+  }
+  aside {
+    display: none;
+  }
+  main {
+    width: 50vh;
+    height: 95vh;
+    padding: 1vh;
+  }
+  div.tele-color {
+    padding: 1vh;
+  }
+  h1 {
+    font-size: 50%;
+  }
+  h2 {
+    font-size: 50%;
+  }
+  h3 {
+    font-size: 50%;
+  }
+  p {
+    font-size: 50%;
+  }
+  .nombre {
+    display: none;
+  }
+  .imagen {
+    width: 75%;
+    height: 50%;
+  }
+  .nombre {
+    width: 75%;
+    height: 50%;
+  }
+  .respuesta {
+    width: 50%;
+    height: 50%;
+  }
+}
